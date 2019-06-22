@@ -1,0 +1,55 @@
+body, ul{padding: 0; margin: 0; list-style: none;}
+body{background: #000;}
+
+#geral{overflow:hidden;}
+
+#geral #top{width: 1150px; margin: 0 auto; overflow: hidden; margin-top: 25px;}
+
+#geral #top #logo, #menutop {float:left; width: 400px;}
+#geral #top #logo{margin-right: 250px}
+#geral #top #logo a img{border: 0;}
+#geral #top #menutop{overflow: hidden;}
+#geral #top #menutop li{float: left; padding:25px 14px 0 14px; height: 50px}
+#geral #top #menutop li:hover{background: #171717}
+
+
+#geral #banner{width: 1150px;height: : 466px;margin: 0 auto; overflow: hidden; margin-top: 10px;}
+
+#geral #barrameio{height: 45px; background: #8B8878; margin-top: 10px; text-align: center; padding: 15px 0 0 0}
+
+#geral #conteudo, #box{width: 1150px; margin: 0 auto;}
+#geral #conteudo{overflow: hidden;}
+
+#geral #conteudo #box{color: #fff; overflow: hidden; margin-top: 20px; text-align: center;font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; color:#fff; }
+#geral #conteudo #box #boxa, #boxb, #boxc{width: 305px; height: 318px; float: left; }
+#geral #conteudo #box #boxa{margin-right: 100px;}
+#geral #conteudo #box #boxb{margin-right: 100px;}
+
+#geral #conteudo #box #boxd, #boxe, #boxf{width: 305px; height: 318px; float: left; margin-top: 20px;}
+#geral #conteudo #box #boxd{margin-right: 100px;}
+#geral #conteudo #box #boxe{margin-right: 100px;}
+
+
+#rodape{overflow: hidden; width: 1350px; background: #474747; margin: 0 auto; margin-top: 20px;}
+#rodape #info, #social{float: left;}
+
+#rodape #info{width: 200px; overflow: hidden; font-family: Georgia, "Times New Roman", Times, serif ; color: #000000; font-size: 16px; text-align: center;}
+
+#rodape #social{width: 1100px; overflow: hidden;}
+#rodape #social li a{display: block; width: 35px; height: 25px; float: right; margin-top: 5px; }
+#rodape #social li #face {background-position: 0 0;}
+#rodape #social li #insta {background-position: 0 0;}
+#rodape #social li #twitter {background-position: 0 0;}
+
+.menu:link{font-family: Georgia, "Times New Roman", Times, serif; color:#fff; text-decoration: none; font-size: 25px;}
+.menu:visited{font-family: Georgia, "Times New Roman", Times, serif; color:#fff; text-decoration: none; font-size: 25px;}
+.menu:hover{font-family: Georgia, "Times New Roman", Times, serif; color:#fff; text-decoration: none; font-size: 25px;}
+
+.fontebranco16{font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; color: #fff;}
+
+#mostrar {margin-top: 25px;}
+
+label {display: inline-block; width: 90px; text-align: right; font-family: Georgia, "Times New Roman", Times, serif; color:#fff;margin-bottom: 60px; text-align: center;}
+
+input, textarea {font: 1em helvetica; width: 300px;box-sizing: border-box;border: 1px solid #999;}
+

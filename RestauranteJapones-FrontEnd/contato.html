@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo-png.png">
+	<title>Nippon House</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui.css">
+	<script src="js/jquery.js"></script>
+	<script  src="js/jquery.mask.min.js"/></script>
+	<script src="js/jquery-ui.js"></script>
+	
+	  
+	
+	<script >
+		$(document).ready(function () { 
+			$("#telefone").mask('(99) 99999-9999');
+			});
+	
+	    function cadastro(){
+	       alert('Mensagem Enviada');
+	    }
+
+		$(function() {
+		    $( "#calendario" ).datepicker();
+		});
+  
+	</script>
+
+	<style type="text/css">
+		#butao{background: #DCDCDC; text-align: center; width: 150px; font-family: Jazz LET, fantasy; margin-left: 50px; }
+		input{cursor: pointer;}﻿
+	</style>
+</head>
+<body>
+	<div id="geral">
+		<div id="top">
+			<div id="logo"><a href="#"><img src="img/logonippon.png" width="350" height="150"> </a></div>
+			
+			<ul id="menutop">
+				<li><a href="index.html" class="menu">Inicio</a></li>
+				<li><a href="sobre.html" class="menu">Sobre</a></li>
+				<li><a href="pratos.html" class="menu">Pratos</a></li>
+				<li><a href="contato.html" class="menu">Contato</a></li>
+			</ul>
+		</div>
+		<div id="conteudo">
+			<p class="fontebranco16"> Para melhor feedback, temos aqui um local no qual você pode entrar em contato conosco. Ajude-nos a melhorar nosso trabalho e torna-lo o mais acolhedor possivel.
+			</p>
+
+			<form action="contato.html" method="post">
+			    <div>
+			        <label for="nome">Nome:</label>
+			        <input type="texto" id="nome" name="nome_usuario">
+			    </div>
+
+			    <div>
+			        <label for="email">E-mail:</label>
+			        <input type="email" id="email" name="email_usuario">
+			    </div>
+
+			    <div>
+					<label for="telefone" >Telefone</label>
+					<input  type="tel" name="telefone" id="telefone" />
+			    </div>
+			    
+			    <div>
+		        	<label for="obs">Observações:</label>
+		        	<textarea id="texto" name="obs_usuario"></textarea> 
+		      	</div>
+
+		      	 
+		    	<div>
+		    		<label for="obs">Data:</label>
+		    		<input type="text" id="calendario" /></p>
+		    		
+		    	</div>
+		    	<input type="submit" class="enviar" id="butao" onclick="cadastro()"  />
+
+			</form>
+		</div>
+	</div>
+		<div id="rodape">
+			<div id="info">
+				     © by MrYvinis<br/>
+				          4002-8922
+			</div>
+			<ul id="social">
+				<li id="face"><a href="#" title="Facebook">
+					<img src="img/face.png" width="25" height="25"></a>
+				</li>
+				<li id="insta"><a href="#" title="Instagram">
+					<img src="img/insta.png" width="25" height="25"></a>
+				</li>
+				<li id="twitter"><a href="#" title="Twitter">
+					<img src="img/twitter.png" width="25" height="25"></a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+
+</body>
+</html>
+ 

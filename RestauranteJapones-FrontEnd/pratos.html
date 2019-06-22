@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo-png.png">
+	<title>Nippon House</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+	.hidden{display: none;}
+	#butao{background: #DCDCDC; text-align: center; width: 150px; font-family: Jazz LET, fantasy; margin-left: 50px; }
+	input{cursor: pointer;}﻿
+</style>
+
+<script>
+function mostrar(id){
+ document.getElementById(id).style.display = 'block';
+}
+function fechar(id){
+ if(document.getElementById(id).style.display == 'block'){ 
+  document.getElementById(id).style.display = 'none';
+ }else{
+  document.getElementById(id).style.display = 'block';
+ }
+}
+
+</script>
+
+</head>
+<body>
+	<div id="geral">
+		<div id="top">
+			<div id="logo"><a href="#"><img src="img/logonippon.png" width="350" height="150"> </a></div>
+			
+			<ul id="menutop">
+				<li><a href="index.html" class="menu">Inicio</a></li>
+				<li><a href="sobre.html" class="menu">Sobre</a></li>
+				<li><a href="pratos.html" class="menu">Pratos</a></li>
+				<li><a href="contato.html" class="menu">Contato</a></li>
+			</ul>
+		</div>
+		<div id="barrameio">PRATOS</div>
+		<div id="conteudo">
+			<p class="fontebranco16"> Oferecemos diariamente o melhor da comida típica japonesa, tendo uma grande variedade de pratos principais, rodizios, acompanhamentos, sobremesas e bebidas. Clique no que procura:
+			</p>
+			<div id="box">
+				<div id="boxa">
+					<img src="img/sushi.jpg" width="360" height="230" title="Sushi">
+					<input type="button" value="SUSHI" onclick="mostrar('su')" id="butao" />
+					<br/>
+					
+					
+				</div>
+				<div id="boxb">
+					<img src="img/combinado.jpg" width="360" height="230" title="Combinado">
+					<input type="button" value="COMBINADOS" onclick="mostrar('co')" id="butao"/>
+					<br/>
+					
+					
+				</div>
+				<div id="boxc">
+					<img src="img/temaki.jpg" width="360" height="230" title="Temaki">
+					<input type="button" value="TEMAKIS" onclick="mostrar('te')" id="butao"/>
+					<br/>
+					
+					
+				</div><br/>
+				<div id="boxd">
+					<img src="img/teishoku.jpg" width="360" height="230" title="Teishoku">
+					<input type="button" value="TEISHOKU" onclick="mostrar('ku')" id="butao"/>
+					<br/>	
+
+				</div>
+				<div id="boxe">
+					<img src="img/sobremesa.jpg" width="360" height="230" title="Sobremesa">
+					<input type="button" value="SOBREMESAS" onclick="mostrar('so')" id="butao"/>
+					<br/>
+
+				</div>
+				<div id="boxf">
+					<img src="img/bebidas.jpg" width="360" height="230" title="Bebida">
+					<input type="button" value="BEBIDAS" onclick="mostrar('be')" id="butao"/>
+					<br/>
+					
+
+				</div>
+			</div>
+			<div id="su" class="hidden">
+				<p class="fontebranco16">
+					MAKI SUSHI (4 UNIDADES):<br/>
+					FUTOMAKI<br/>
+					Soboro, kani-kama, tamagoyaki, tobiko e abacate R$ 12,00<br/>
+					<br/>
+					URAMAKI CALIFORNIA<br/>
+					Manga, sticks de pepino e salmão R$ 10,00<br/>
+					<br/>
+					URAMAKI SKIN <br/>
+					Skin teriaki R$ 10,00<br/>
+					<br/>
+					SPICE TUNA<br/>
+					Sticks de pepino, atum e chili japonês R$ 12,00<br/>
+					<br/>
+					SPICE SALMON:<br/>
+					Sticks de pepino, salmão e chili japonês R$ 10,00<br/>
+					<br/>
+					TEKKA MAKI<br/>
+					Atum R$ 12,00<br/>
+					<br/>
+					KAPPA MAKI<br/>
+					Pepino R$ 8,00<br/>
+					<br/>
+					<br/>
+					NIGUIRI SUSHI (PAR):<br/>
+					MAGURO<br/>
+					Atum R$ 16,00<br/>
+					<br/>
+					SHAKE<br/>
+					Salmão R$ 14,00<br/>
+					<br/>
+					SHIROMI<br/>
+					Peixe branco (disponível do dia) R$ 14,00<br/>
+					<br/><br/><br/><br/>		
+				</p>
+			</div>
+
+			<div id="co" class="hidden">
+				<p class="fontebranco16">
+					COMBINADO DELIVERY EXPRESS - R$ 40,50<br/>
+					18 peças de sushis variados <br/>
+	 				<br/>
+					COMBINADO NAMI - R$ 45,50<br/>
+					9 fatias de sashimi: Atum, salmão, peixe branco (disponível do dia)<br/>
+					1 par de niguiri de salmão, 1 par de niguiri skin, 3 pares de maki (variados),<br/>
+					1 par de Hot roll do chef, 1 par de hot roll burajiru<br/>
+					<br/> 
+					COMBINADO KAI - R$ 65,50<br/>
+					12 fatias de sashimi: Atum, salmão, peixe branco (disponível do dia)<br/>
+					1 par de niguiri de salmão, 1 par de niguiri skin, 1 par de kyurimaki,<br/>
+					3 pares de maki (variados), 1 par de gunkan maki de ovas<br/>
+					1 par de Hot roll do chef, 1 par de hot roll burajiru<br/>
+					<br/>
+					COMBINADO SHAKE - R$ 45,50<br/>
+					9 fatias de sashimi de salmão<br/>
+					1 par de niguiri de salmão, 1 par de niguiri skin, 3 pares de maki,<br/>
+					1 par de Hot roll do chef, 1 par de hot roll burajiru<br/>
+					<br/><br/><br/><br/>
+				</p>
+			</div>
+
+			<div id="te" class="hidden">
+				<p class="fontebranco16">
+					TEMAKI DE SALMÃO R$ 22,50<br/>
+ 					<br/>
+					TEMAKI DE ATUM R$ 26,50<br/>
+					<br/>
+					TEMAKI DE CALIFORNIA R$ 22,50<br/>
+					 <br/>
+					TEMAKI DE CAMARÃO EMPANADO R$ 27,50 <br/>
+					<br/>
+					TEMAKI PAULISTA <br/>
+					Alface, abacate, pepino, kani-kama, salmão, atum, peixe branco e ovas R$ 27,50 <br/>
+					<br/>
+					TEMAKI PHILADELPHIA<br/>
+					Salmão grelhado, cebolinha e cream cheese R$ 24,50 <br/>
+					<br/>
+					TEMAKI NINJA<br/>
+					Salmão, atum, peixe branco, maionese e cebolinha R$ 24,50<br/>
+					<br/> 
+					TEMAKI NINJA SPICE<br/>
+					Salmão, atum, peixe branco, maionese e cebolinha com pimenta ichimi R$ 24,50<br/>
+					<br/>
+					TEMAKI KAI <br/>
+					Skin grelhado na hora com molho especial Kai R$ 24,50 <br/>
+					<br/>	
+					TEMAKI SALPICADO COM OVAS R$ + 6,00<br/>
+					<br/>
+					TEMAKI SEM ARROZ OU ABERTO R$ + 5,00<br/>
+					<br/><br/><br/><br/>					
+				</p>
+			</div>
+
+			<div id="ku" class="hidden">
+				<p class="fontebranco16">
+					YAKISOBA<br/>
+					Yakissoba de carne e legumes R$ 40,50<br/>
+					<br/>
+					YAKIZAKANA COM YASAI ITAME<br/>
+					salmão ou anchova grelhados com legumes refogados a moda japonesa R$ 44,50<br/>
+					<br/>
+					CHIKEN FURAI COM YASAI ITAME<br/>
+					Filé de frango a milanesa com legumes refogados a moda japonesa R$ 40,50<br/>
+					<br/>
+					EBI FURAI COM YASAI ITAME<br/>
+					6 unidades de camarões grandes a milanesa com legumes refogados a moda japonesa R$ 54,50<br/>
+					<br/>
+					FURAI COM YASAI ITAME<br/>
+					2 unidades de camarões grandes, 2 lula e 2 cebolas a milanesa, com legumes refogados a moda japonesa R$ 48,50<br/>
+					<br/>
+					TONKATSU COM YASAI ITAME<br/>
+					carne de porco a milanesa com legumes refogados a moda japonesa R$ 44,50<br/>
+					<br/>
+					TEMPURA COM YASAI ITAME<br/>
+					Camarões grandes, 4 tipos de legumes e kakiague com legumes refogados a moda japonesa. R$ 48,50<br/>
+					<br/>
+					BIFU SUTEIKI COM YASAI ITAME<br/>
+					Bife de carne na chapa com legumes refogados a moda japonesa R$ 46,50<br/>
+					<br/>
+					SASHIMI TEISHOKU<br/>
+					Fatias de sashimi 4 de cada tipo: salmão, atum e peixe branco R$ 36,50<br/>
+					<br/><br/><br/><br/>
+				</p>
+				
+			</div>
+
+			<div id="so" class="hidden">
+				<p class="fontebranco16">
+					TEMPURA DE BANANA R$ 15 ,00<br/>
+					Tempurá de banana com uma bola de sorvete de creme e calda de chocolate <br/>
+					 <br/>
+					PETIT GATEAU R$ 15,00<br/>
+					 <br/>
+					MOUSSE DE CHOCOLATE R$ 9,00<br/>
+					 <br/>
+					FRUTAS DA ESTAÇÃO R$ 8,00<br/>
+					 <br/>
+					CREME DE PAPAIYA  R$ 15,00 <br/>
+					Creme de papaiya com licor de cassis<br/>
+					 <br/>
+					SORVETE HAGEEN-DAZS R$ 12,00 <br/>
+					Sorvete Hageen-Dazs macadamia, doce de leite, chocolate belga ou morango<br/>
+					<br/>
+					SORVETE KIBON R$ 10,00 <br/>
+					Sorvete Kibon chocolate, morango, creme ou flocos<br/>
+					<br/><br/><br/><br/>
+				</p>
+				
+			</div>
+
+			<div id="be" class="hidden">
+				<p class="fontebranco16">
+					REFRIGERANTE R$ 6,60<br/>
+					H2O R$ 6,80<br/>
+					ÁGUA R$ 5,50<br/>
+					SUCO DE LARANJA R$ 8,50<br/>
+					<br/>
+					SUCOS ESPECIAIS R$ 10,20 <br/>
+					FEEL GOOD R$ 6,10<br/>
+					 <br/>
+					CAFÉ<br/>
+					ILLY R$ 4,80<br/>
+					 <br/>
+					ALCOÓLICOS  <br/>
+					HEINEKEN<br/>
+					R$ 8,50<br/>
+					 <br/>
+					CAIPIRINHAS<br/>
+					Limão, lima, kiwi, morango e frutas vermelhas 12,00<br/>
+					 <br/>
+					SAQUÊ<br/>
+					R$ 24,00<br/>
+					 <br/>
+					51<br/>
+					R$ 14,00<br/>
+					 <br/>
+					CACHAÇA ESPECIAL<br/>
+					R$ 20,00<br/>
+					 <br/>
+					SMIRNOFF<br/>
+					R$ 22,00<br/>
+
+					SMIRNOFF ICE<br/>
+					R$ 10,00<br/>
+					 
+					STEINHEGER BECOSA<br/>
+					R$ 10,00<br/>
+					<br/>
+				</p>
+				
+			</div>
+
+
+			
+		</div>
+		<div id="rodape">
+			<div id="info">
+				     © by MrYvinis<br/>
+				          4002-8922
+			</div>
+			<ul id="social">
+				<li id="face"><a href="#" title="Facebook">
+					<img src="img/face.png" width="25" height="25"></a>
+				</li>
+				<li id="insta"><a href="#" title="Instagram">
+					<img src="img/insta.png" width="25" height="25"></a>
+				</li>
+				<li id="twitter"><a href="#" title="Twitter">
+					<img src="img/twitter.png" width="25" height="25"></a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+
+</body>
+</html>
