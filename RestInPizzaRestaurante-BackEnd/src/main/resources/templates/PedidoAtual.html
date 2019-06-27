@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<meta charset="UTF-8">
+<title>Pedido Atual</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+ 
+</head>
+<body>
+	<div th:if="${pedido != null}">
+		<h1>Pedido Atual</h1>
+    	<div th:if="${not #sets.isEmpty(pedido)}">
+			<form action="/pedido/add{codigo}" method="POST" enctype="multipart/form-data">    		
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">Prato</th>
+				      <th scope="col">Preço</th>
+				      <th scope="col">Quantidade</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr th:each = "item : ${pedido}">
+			          <td th:text="${item.prato}"></td>
+			          <td th:text="${item.preco}}"></td>
+			          <td th:text="${item.qtd}"></td>
+			          <td>
+				      	<a th:href="@{/pedido/deletar/{codigo}(codigo = ${item.codigo})}">
+				      		<button type="button" class="btn btn-danger">Deletar</button>
+				      	</a> 
+				      </td>
+				    </tr>
+				  </tbody>
+			    </table>
+			    <h2 th:text="@{'Total do Pedido: R$ '+${#numbers.formatDecimal(pedido.total,1,2)}}"></h2><br>
+			    <button id="btn-continuar" type="button" class="btn btn-primary">Continuar</button>
+			    <div id="endereco-pedido">
+			    	<h1>Insira o endereço de entrega</h1><br>
+			    	<label>Endereço: </label><input required="required" type="text" name="endereco"><br>
+			    	<button type="submit" class="btn btn-danger">Encerrar Pedido</button>
+			    </div>
+		    </form>
+    	</div>
+    	<div th:if="${#sets.isEmpty(pedido.itens)}">
+    		<h2>Pedido em ativo, nada aqui.</h2>
+    		<h2>Compre <a href="/">aqui</a></h2>
+    	</div>
+	</div>
+    <div th:if="${pedido == null}">
+    	<h1>Você não possui pedidos</h1>
+    	<h2>Compre <a href="/">aqui</a></h2>
+    </div>
+    <div>
+    	<a href="/pedido/pedidosEncerrados"> Pedidos Encerrados</a>
+    </div>
+    
+</body>
+</html>

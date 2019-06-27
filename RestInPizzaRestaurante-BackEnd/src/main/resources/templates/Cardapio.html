@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec ="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Cardapio</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+<title>Cardapio</title>
+</head>
+<body>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Prato</th>
+				<th scope="col">Preço R$</th>
+				<th scope="col">Imagem</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "comida: ${listaPratos}" >
+				<td th:text="${comida.codigo}"></td>
+				<td th:text="${comida.prato}"></td>
+				<td th:text="${comida.preco}"></td>
+				<td> <img width="200" height="200" th:src="@{'/images/'+${comida.prato}+.png}"/> </td>
+				<td sec:authorize="hasRole('CLIENTE')"> <a th:href="@{/pedido/add/{codigo}(codigo = ${comida.codigo})}"> <button type="button" class="btn btn-primary">Comprar</button> </a> </td>
+				
+				
+			</tr>
+
+		</tbody>
+	</table>
+	
+	
+	<script src="/js/bootstrap.min.js"> </script>
+</body>
+</html>

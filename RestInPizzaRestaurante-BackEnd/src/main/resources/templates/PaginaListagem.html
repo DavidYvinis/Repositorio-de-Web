@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec ="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+
+<title>Comidas Cadastradas</title>
+</head>
+<body>
+
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Prato</th>
+				<th scope="col">Preco</th>
+				<th scope="col">Data de Cadastro</th>
+				<th scope="col">Imagem</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "comida: ${listaPratos}">
+				<td th:text="${comida.codigo}"></td>
+				<td th:text="${comida.prato}"></td>
+				<td th:text="${comida.preco}"></td>
+				<td th:text="${{comida.dataNascimento}}"></td>
+				<td> <img width="200" height="200" th:src="@{'/images/'+${comida.prato}+.png}"/> </td>
+				<td sec:authorize="hasRole('ROLE_GERENTE')"> <a th:href="@{/rest/excluir/{codigo}(codigo = ${comida.codigo})}"> <button type="button" class="btn btn-danger">  Excluir </button> </a></td>
+				<td sec:authorize="hasRole('ROLE_GERENTE')"> <a th:href="@{/rest/atualizar/{codigo}(codigo = ${comida.codigo})}"> <button type="button" class="btn btn-primary">Atualizar</button> </a> </td>
+				
+			</tr>
+
+		</tbody>
+	</table>
+
+
+
+
+
+
+
+<a href="/pessoa/formulario"><button> Ir para Formulario</button></a>
+
+	<script src="/js/bootstrap.min.js"> </script>
+
+</body>
+</html>

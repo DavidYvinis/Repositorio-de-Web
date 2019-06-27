@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+</head>
+<body>
+
+	
+
+
+	<form action="/rest/salvar" method="post" th:object="${comida}"
+		enctype="multipart/form-data">
+
+		<div class="alert alert-success" role="alert"
+			th:if="${!#strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}"></span>
+
+		</div>
+
+		<div class="alert alert-danger" role="alert"
+			th:if="${#fields.hasAnyErrors()}">
+			<div th:each="detailedError : ${#fields.detailedErrors()}">
+
+				<span th:text="${detailedError.message}"></span>
+			</div>
+		</div>
+
+		<input type="hidden" th:field="*{codigo}">
+		<div class="form-group">
+			Prato: <input class="form-control" type="text" th:field="*{prato}">
+			<small id="pratoHelp" class="form-text text-muted">Digite o prato para cadastro.</small><br>
+		</div>
+			Preço: <input class="form-control" type="text" th:field="*{preco}">
+			<small id="precoHelp" class="form-text text-muted">Digite o preço do prato.</small><br>
+		
+			Imagem:	<input type="file" name="imagem"> <br> <br>
+		
+			Data de Cadastro: <input class="form-control" type="text" th:field="*{dataNascimento}">
+			<small id="dataHelp" class="form-text text-muted">Digite a data atual.</small><br>
+			
+			<input type="submit" value="Cadastrar">
+
+
+
+	</form>
+
+
+	<script src="/js/bootstrap.min.js"> </script>
+
+
+
+
+
+
+
+</body>
+</html>
